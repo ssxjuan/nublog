@@ -102,15 +102,15 @@ function Home({ posts  }) {
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
                 className: "w-full flex items-center flex-col bg-white",
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("nav", {
-                        className: "fixed left-0 top-0 w-full h-14 border border-transparent border-b-gray-100 flex justify-center bg-white text-sm text-black z-50",
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "space-grotesk max-w-[1600px] w-full flex items-center justify-between px-7 md:px-14 font-medium",
-                            children: [
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "flex items-center ",
-                                    children: [
-                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", {
+                        className: "fixed left-0 top-0 w-full border border-transparent border-b-gray-100 flex flex-col justify-center bg-white text-sm text-black z-50",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "h-14 space-grotesk max-w-[1600px] w-full border border-transparent border-b-gray-100 flex items-center justify-between px-7 md:px-14 font-medium",
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: "flex items-center ",
+                                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                             className: "flex items-center mr-12 cursor-pointer",
                                             onClick: ()=>window.location.href = "/",
                                             children: [
@@ -124,44 +124,125 @@ function Home({ posts  }) {
                                                     children: "BETA"
                                                 })
                                             ]
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                            href: "https://nutrustx.web.app/challenges",
-                                            className: "mr-12 hidden md:block",
-                                            children: "Buscamos Traders"
                                         })
-                                    ]
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "items-center hidden md:block",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                            href: "https://nutrustx.web.app/login",
-                                            children: "Area de Clientes"
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
-                                            href: "https://nutrustx.web.app/signup",
-                                            className: "py-2 font-medium px-4 ml-10 bg-green-light text-sm text-black",
-                                            children: "Se Trader"
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: "items-center flex",
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
+                                            href: "/",
+                                            className: "title text-base",
+                                            children: "Noticias"
                                         })
-                                    ]
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: "items-center block md:hidden",
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
-                                        src: _assets_menu_05_svg__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z,
-                                        alt: "",
-                                        className: "invert cursor-pointer"
                                     })
-                                })
-                            ]
-                        })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "w-full py-2 px-7 md:px-14 max-w-[1600px] flex justify-between",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0",
+                                                children: "Bitcoin"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                class: "w-6 overflow-hidden inline-block",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                    class: "ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans",
+                                                children: "24,329$"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "md:flex hidden items-center",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0",
+                                                children: "Bitcoin"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                class: "w-6 overflow-hidden inline-block",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                    class: "ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans",
+                                                children: "24,329$"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "md:flex hidden items-center",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0",
+                                                children: "Bitcoin"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                class: "w-6 overflow-hidden inline-block",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                    class: "ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans",
+                                                children: "24,329$"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "md:flex hidden items-center",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0",
+                                                children: "Bitcoin"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                class: "w-6 overflow-hidden inline-block",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                    class: "ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans",
+                                                children: "24,329$"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "md:flex hidden items-center",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0",
+                                                children: "Bitcoin"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                class: "w-6 overflow-hidden inline-block",
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                    class: "ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"
+                                                })
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans",
+                                                children: "24,329$"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "w-full text-start font-normal text-black space-grotesk pt-14 md:pt-28 items-start flex pb-[18rem] mb-24 relative overflow-hidden max-w-[1400px] px-7 md:px-14",
+                        className: "w-full text-start font-normal text-black space-grotesk pt-20 md:pt-28 items-start flex pb-[18rem] mb-24 relative overflow-hidden max-w-[1400px] md:px-14",
                         children: [
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "w-1/4 md:flex hidden pr-12 flex-col",
+                                className: "w-1/4 md:flex hidden pr-12 flex-col border",
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_eisberg_labs_next_google_adsense__WEBPACK_IMPORTED_MODULE_2___default()), {
                                         client_id: "3940256099942544"
@@ -183,46 +264,49 @@ function Home({ posts  }) {
                                 ]
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "xl:w-1/2 md:mt-0 mt-12 w-full flex flex-col items-start text-start",
+                                className: "xl:w-1/2 md:mt-0 mt-12 w-full flex flex-col items-start text-start px-7",
                                 children: [
                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                         className: "w-full cursor-pointer",
                                         onClick: ()=>window.location.href = "/cuales_son_los_principales_usos_de_una_cuenta_bancaria",
                                         children: [
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                                className: "mb-8",
-                                                children: "Noticias Relevantes"
+                                                className: "m-0 md:text-4xl text-3xl",
+                                                children: "Los principales usos de una cuenta bancaria"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                className: "mb-4 mt-0 title",
+                                                children: "Bitcoin, Inversiones, Finanzas"
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                 width: "1000",
                                                 height: "600",
-                                                src: "https://images.unsplash.com/photo-1664490697404-5c84e8829f49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3VlbnRhJTIwYmFuY2FyaWElMjB0cmFuc2ZlcmVuY2lhc3xlbnwwfHwwfHw%3D&w=1000&q=80",
+                                                src: "https://nutrustx.tech/_next/image?url=https%3A%2F%2Fwww.autonoma.pe%2Fcomunidad%2Fwp-content%2Fuploads%2F2022%2F04%2Fmotivos-estudiar-negocios-internacionales.jpg&w=1080&q=75",
                                                 alt: "Notice Image",
                                                 className: "w-full h-96 object-cover"
                                             }),
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                                className: "leading-8 mt-4 pb-4 border border-transparent border-b-gray-100",
-                                                children: "\xbfCu\xe1les son los principales usos de una cuenta bancaria?"
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                children: "Las cuentas bancarias pueden ofrecer varias ventajas y usos, y son una herramienta importante para el ahorro, la inversi\xf3n y la administraci\xf3n financiera. "
                                             })
                                         ]
                                     }),
                                     posts.map((post)=>{
                                         return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                             onClick: ()=>window.location.href = `/${post.slug}`,
-                                            className: "mt-8 w-full flex items-center cursor-pointer",
+                                            className: "mt-8 w-full flex md:flex-nowrap flex-wrap items-center cursor-pointer",
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                     width: "1000",
                                                     height: "600",
                                                     src: post.image,
                                                     alt: post.keywords,
-                                                    className: "w-60 h-40 object-cover border"
+                                                    className: "w-full md:w-60 h-60 md:h-40 object-cover border"
                                                 }),
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: "flex flex-col px-4",
+                                                    className: "flex flex-col md:px-4 mt-4 md:mt-0",
                                                     children: [
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                                            className: "text-xl leading-6 mt-0 border border-transparent border-b-gray-100",
+                                                            className: "text-xl leading-6 mt-0",
                                                             children: post.title
                                                         }),
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
@@ -235,6 +319,47 @@ function Home({ posts  }) {
                                         }, post.slug);
                                     })
                                 ]
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: "w-1/4 -mt-8 md:block hidden",
+                                children: posts.map((post)=>{
+                                    if (post && post.title) {
+                                        return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: "w-full mt-8 cursor-pointer",
+                                            onClick: ()=>window.location.href = "/" + post.slug ? post.slug : 0,
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: "w-full h-72 relative",
+                                                children: [
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_5___default()), {
+                                                        width: "1000",
+                                                        height: "1000",
+                                                        src: post.image,
+                                                        alt: "",
+                                                        className: "w-full h-full object-cover"
+                                                    }),
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
+                                                        className: "absolute top-4 right-4 bg-green-500 px-4 py-1 text-black text-sm font-semibold",
+                                                        href: "/" + post.slug ? post.slug : 0,
+                                                        children: "Read"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                        className: "flex absolute bottom-0 w-full flex-col h-24 p-4 backdrop-blur-sm bg-white/20",
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                                                className: "text-white text-md font-medium text-ellipsis overflow-hidden whitespace-nowrap",
+                                                                children: post.title ? post.title : ""
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                                className: "text-white m-0 leading-4 text-xs",
+                                                                children: post.description ? post.description : ""
+                                                            })
+                                                        ]
+                                                    })
+                                                ]
+                                            })
+                                        }, "");
+                                    }
+                                })
                             })
                         ]
                     })

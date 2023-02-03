@@ -24,6 +24,11 @@ __webpack_require__.r(__webpack_exports__);
 function App({ Component , pageProps  }) {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("script", {
+                dangerouslySetInnerHTML: {
+                    __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"c9ae99f8327b21407b3b7bc8128d416c"})});`
+                }
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_script__WEBPACK_IMPORTED_MODULE_1___default()), {
                 src: "https://www.googletagmanager.com/gtag/js?id=G-JE1CCXG198",
                 strategy: "afterInteractive"
