@@ -21,8 +21,6 @@ import bg from '../assets/bgex.png';
 
 export default function Post({source, frontmatter, relatedPosts}) {
 
-    console.log(frontmatter.title)
-
     return (
         <>
             <Head>
@@ -49,12 +47,6 @@ export default function Post({source, frontmatter, relatedPosts}) {
                             <Image src={logo} alt="NuTrustX Logo PNG" className="brand-light w-8"/>
                             <p className='space-grotesk ml-2 text-[10px] mt-auto font-medium'>BETA</p>
                             </div>
-                            <Link href='/products' className='mr-12 hidden md:block'>Productos</Link>
-                            <Link href='/challenges' className='mr-12 hidden md:block'>Buscamos Traders</Link>
-                        </div>
-                        <div className="items-center hidden md:block">
-                            <Link href='/login'>Area de Clientes</Link>
-                            <Link href='/signup' className='py-2 font-medium px-4 ml-10 bg-green-light text-sm text-black'>Se Trader</Link>
                         </div>
                         <div className="items-center block md:hidden">
                             <Image src={mobile} alt="" className='invert cursor-pointer' />
@@ -91,10 +83,10 @@ export default function Post({source, frontmatter, relatedPosts}) {
 
                                     if(post && post.title) {
                                         return (
-                                            <div key='' className="w-full mt-8 cursor-pointer" onClick={() => window.location.href = "http://localhost:3000/" + post.slug ? post.slug : ''}>
+                                            <div key='' className="w-full mt-8 cursor-pointer" onClick={() => window.location.href = "/" + post.slug ? post.slug : ''}>
                                                 <div className="w-full h-72 relative">
-                                                    <Image width="1000" height="1000" src={bg} alt="" className='w-full h-full object-cover' />
-                                                    <Link className='absolute top-4 right-4 bg-green-500 px-4 py-1 text-black text-sm font-semibold' href={"http://localhost:3000/" + post.slug ? post.slug : ''}>Read</Link>
+                                                    <Image width="1000" height="1000" src={post.image} alt="" className='w-full h-full object-cover' />
+                                                    <Link className='absolute top-4 right-4 bg-green-500 px-4 py-1 text-black text-sm font-semibold' href={"/" + post.slug ? post.slug : ''}>Read</Link>
                                                     <div className="flex absolute bottom-0 w-full flex-col h-24 p-4 backdrop-blur-sm bg-white/20">
                                                     <h3 className="text-white text-md font-medium text-ellipsis overflow-hidden whitespace-nowrap">{post.title ? post.title : ''}</h3>
                                                     <p className="text-white m-0 leading-4 text-xs">{post.description ? post.description : ''}</p>

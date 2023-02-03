@@ -38,6 +38,10 @@ function Document() {
                 href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap",
                 rel: "stylesheet"
             }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
+                rel: "shortcut icon",
+                href: "favicon.ico"
+            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(next_document__WEBPACK_IMPORTED_MODULE_1__.Head, {}),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("body", {
                 children: [

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
 
 import Adsense, { AdUnit } from '@eisberg-labs/next-google-adsense'
 
@@ -9,16 +8,26 @@ import Image from 'next/image'
 
 import logo from '../assets/brand.svg';
 import mobile from '../assets/menu-05.svg';
-import ico from '../assets/brand.ico'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({ posts }) {
 
   return (
     <>
-      <Head>
-
+      <Head>   
+          <title>NuTrustX Blog: Finanzas y criptomonedas: Noticias y tutoriales</title>
+          <meta name="description" content="Blog de noticias y recursos educativos sobre finanzas y criptomonedas en español. Ofrecemos información actualizada y consejos prácticos para ayudar a los lectores a entender y aprovechar al máximo el mundo de la inversión y laS criptos." />
+          <meta name="keywords" content="Finanzas, Criptomonedas, Noticias, Tutoriales, Español" />
+          <meta name="robots" content="index, follow" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="language" content="es-ES" />
+          <meta name="author" content="GPT-3" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta property="og:title" content="NuTrustX Blog: Finanzas y criptomonedas: Noticias y tutoriales" />
+          <meta property="og:description" content="Blog de noticias y recursos educativos sobre finanzas y criptomonedas en español. Ofrecemos información actualizada y consejos prácticos para ayudar a los lectores a entender y aprovechar al máximo el mundo de la inversión y laS criptos." />
+          <meta property="og:image" content="og.jpg" />
+          <meta property="og:url" content="https://nutrustx.web.app" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://nutrustx.web.app/" />
       </Head>
       <main className="w-full flex items-center flex-col bg-white">
           
@@ -59,7 +68,7 @@ export default function Home({ posts }) {
             />
           </div>
           <div className="xl:w-1/2 md:mt-0 mt-12 w-full flex flex-col items-start text-start">
-            <div className="w-full cursor-pointer" onClick={() => window.location.href='http://localhost:3000/cuales_son_los_principales_usos_de_una_cuenta_bancaria'}>
+            <div className="w-full cursor-pointer" onClick={() => window.location.href='/cuales_son_los_principales_usos_de_una_cuenta_bancaria'}>
               <h1 className='mb-8'>Noticias Relevantes</h1>
               <Image width="1000" height="600" src="https://images.unsplash.com/photo-1664490697404-5c84e8829f49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3VlbnRhJTIwYmFuY2FyaWElMjB0cmFuc2ZlcmVuY2lhc3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="Notice Image" className="w-full h-96 object-cover"/>
               <h2 className='leading-8 mt-4 pb-4 border border-transparent border-b-gray-100'>¿Cuáles son los principales usos de una cuenta bancaria?</h2>
@@ -94,16 +103,3 @@ export async function getStaticProps() {
     props: { posts }
   }
 }
-
-/**
- * <h1>bro?</h1>
-          {posts.map((post) => {
-              return(
-                <Link key={post.slug} href={`/${post.slug}`}>
-                  <h1>xd {post.title}</h1>
-                  <p>{post.date}</p>
-                </Link>
-              )
-          })}
-          <h1>bro?</h1>
- */

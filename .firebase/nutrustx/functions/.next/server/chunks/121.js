@@ -1,4 +1,3 @@
-"use strict";
 exports.id = 121;
 exports.ids = [121];
 exports.modules = {
@@ -6,8 +5,8 @@ exports.modules = {
 /***/ 3121:
 /***/ ((module, exports, __webpack_require__) => {
 
-
 "use client";
+"use strict";
 Object.defineProperty(exports, "__esModule", ({
     value: true
 }));

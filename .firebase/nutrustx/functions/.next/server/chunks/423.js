@@ -61,7 +61,7 @@ const getFileBySlug = async (slug)=>{
 };
 const getAllFilesMetadata = ()=>{
     const files = getFiles();
-    return files?.reduce((allPosts, postSlug)=>{
+    return files === null || files === void 0 ? void 0 : files.reduce((allPosts, postSlug)=>{
         const mdxSource = fs__WEBPACK_IMPORTED_MODULE_0___default().readFileSync(path__WEBPACK_IMPORTED_MODULE_1___default().join(root, "data", postSlug), "utf-8");
         const { data  } = gray_matter__WEBPACK_IMPORTED_MODULE_2___default()(mdxSource);
         return [
