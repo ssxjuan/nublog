@@ -9,7 +9,7 @@ export default function Document() {
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"></link>
         <link rel="shortcut icon" href="favicon.ico" />
       <Head />
-      <body>
+      <body className='bg-default'>
         <Main />
         <NextScript />
       </body>

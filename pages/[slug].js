@@ -1,3 +1,6 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head'
@@ -9,17 +12,28 @@ import { getFileBySlug, getFiles } from "@/lib/mdx"
 import MDXComp from '@/components/MDXComp'
 
 import logo from '../assets/brand.svg';
-import mobile from '../assets/menu-05.svg';
 
 import tw from '../assets/tw.png';
 import ig from '../assets/ig.png';
 import tview from '../assets/tview.png';
 import yt from '../assets/yt.png';
 import tiktok from '../assets/tiktok.png';
-import bg from '../assets/bgex.png';
-
 
 export default function Post({source, frontmatter, relatedPosts}) {
+    
+  const [prices, setPrices] = useState({});
+
+  useEffect(() => {
+    getCryptos().then(response => {
+      setPrices({
+        btc: Math.round(response[0].price * 100) / 100,
+        eth: Math.round(response[1].price * 100) / 100,
+        matic: Math.round(response[2].price * 100) / 100,
+        ada: Math.round(response[3].price * 100) / 100,
+        ltc: Math.round(response[4].price * 100) / 100,
+      })
+    });
+  }, []);
 
     return (
         <>
@@ -40,33 +54,70 @@ export default function Post({source, frontmatter, relatedPosts}) {
                 <link rel="canonical" href={'https://nutrustx.web.app/' + frontmatter.slug} />
             </Head>
             <div className='h-full relative'>
-                <nav className='fixed left-0 top-0 w-full h-14 border border-transparent border-b-gray-100 flex justify-center bg-white text-sm text-black z-50'>
-                    <div className="space-grotesk max-w-[1600px] w-full flex items-center justify-between px-7 md:px-14 font-medium">
+                <nav className='fixed left-0 top-0 w-full border border-transparent border-b-gray-100 flex flex-col items-center bg-white text-sm text-black z-50'>
+                    <div className="h-14 space-grotesk max-w-[1600px] w-full border border-transparent border-b-gray-100 flex items-center justify-between px-7 md:px-14 font-medium">
                         <div className="flex items-center ">
                             <div className="flex items-center mr-12 cursor-pointer" onClick={() => window.location.href='/'} >
                             <Image src={logo} alt="NuTrustX Logo PNG" className="brand-light w-8"/>
                             <p className='space-grotesk ml-2 text-[10px] mt-auto font-medium'>BETA</p>
                             </div>
                         </div>
-                        <div className="items-center block md:hidden">
-                            <Image src={mobile} alt="" className='invert cursor-pointer' />
+                        <div className="items-center flex">
+                            <Link href='/' className='title text-base'>Noticias</Link>
+                        </div>
+                    </div>
+                    <div className="w-full py-2 px-7 md:px-14 max-w-[1600px] flex justify-between">
+                        <div className="flex items-center">
+                        <p className='m-0'>Bitcoin</p>
+                        <div className="w-6 overflow-hidden inline-block">
+                            <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.btc}$</p>
+                        </div>
+                        <div className="md:flex hidden items-center">
+                        <p className='m-0'>Ethereum</p>
+                        <div className="w-6 overflow-hidden inline-block">
+                            <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.eth}$</p>
+                        </div>
+                        <div className="md:flex hidden items-center">
+                        <p className='m-0'>Litecoin</p>
+                        <div className="w-6 overflow-hidden inline-block">
+                            <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.ltc}$</p>
+                        </div>
+                        <div className="md:flex hidden items-center">
+                        <p className='m-0'>Polygon</p>
+                        <div className="w-6 overflow-hidden inline-block">
+                            <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.matic}$</p>
+                        </div>
+                        <div className="md:flex hidden items-center">
+                        <p className='m-0'>Cardano</p>
+                        <div className="w-6 overflow-hidden inline-block">
+                            <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
+                        </div>
+                        <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.ada}$</p>
                         </div>
                     </div>
                 </nav>
 
-                <div className="w-full flex items-center flex-col bg-white ">
-                    <div className="w-full text-start font-normal text-black space-grotesk pt-14 md:pt-28 items-start flex pb-[18rem] mb-24 relative overflow-hidden max-w-[1400px] px-7 md:px-14">
+                <div className="w-full flex items-center flex-col bg-white">
+                    <div className="w-full text-start font-normal text-black space-grotesk pt-20 md:pt-40 items-start flex pb-[28rem] md:pb-[18rem] mb-24 relative overflow-hidden max-w-[1400px] px-7 md:px-14">
                         <div className="w-1/4 md:flex hidden pr-12 flex-col">
                             
-                            <Adsense client_id="3940256099942544"/>
+                            <Adsense client_id="9099011145362951"/>
                             <AdUnit className="adsbygoogle block"
-                                data-ad-client="3940256099942544"
+                                data-ad-client="9099011145362951"
                                 data-ad-slot="1033173712"
                                 data-ad-format="auto"
                                 data-full-width-responsive="true"
                             />
                             <AdUnit className="mt-12 adsbygoogle block"
-                                data-ad-client="3940256099942544"
+                                data-ad-client="9099011145362951"
                                 data-ad-slot="1033173712"
                                 data-ad-format="auto"
                                 data-full-width-responsive="true"
@@ -191,3 +242,11 @@ async function getRelatedPostsByTitle(title) {
 
     return relatedPosts;
 }
+
+export const getCryptos = () => {
+    return axios.get('/api/GetCryptoData')
+      .then(response => response.data)
+      .catch(error => {
+        console.error(error.message);
+      });
+};
