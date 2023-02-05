@@ -18,5 +18,3 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NUTRUSTX }}'
           channelId: live
           projectId: nutrustx
-        env:
-          FIREBASE_CLI_EXPERIMENTS: webframeworks

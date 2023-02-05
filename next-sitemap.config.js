@@ -4,3 +4,5 @@ module.exports = {
     generateRobotsTxt: true, // (optional)
     // ...other options
   }
+
+  //firebase-tools@11.14.3
