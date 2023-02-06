@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 import Head from 'next/head'
@@ -10,28 +9,16 @@ import { getAllFilesMetadata } from '@/lib/mdx'
 
 
 import logo from '../assets/brand.svg';
-import mobile from '../assets/menu-05.svg';
 
 export default function Home({ posts }) {
 
-  const [prices, setPrices] = useState({});
   const [sidePostsMap, setSidePostsMap] = useState([]);
+  const [leftPostsMap, setLeftPostsMap] = useState([]);
   const [postsMap, setPostsMap] = useState([]);
 
   useEffect(() => {
-    getCryptos().then(response => {
-      setPrices({
-        btc: Math.round(response[0].price * 100) / 100,
-        eth: Math.round(response[1].price * 100) / 100,
-        matic: Math.round(response[2].price * 100) / 100,
-        ada: Math.round(response[3].price * 100) / 100,
-        ltc: Math.round(response[4].price * 100) / 100,
-      })
-    });
-  }, []);
-
-  useEffect(() => {
-    setSidePostsMap(posts.sort(() => Math.random() - 0.5).slice(0, 15));
+    setSidePostsMap(posts.sort(() => Math.random() - 0.5).slice(0, 12));
+    setLeftPostsMap(posts.sort(() => Math.random() - 0.5).slice(0, 12));
     setPostsMap(posts.sort(() => Math.random() - 0.5).slice(0, 15));
   }, [posts]);
 
@@ -54,62 +41,11 @@ export default function Home({ posts }) {
           <link rel="canonical" href="https://nutrustx.web.app/" />
       </Head>
       <main className="w-full flex items-center flex-col">
-          
-        <nav className='bg-default fixed left-0 top-0 w-full border border-transparent border-b-slate-200 flex flex-col items-center text-sm text-black z-50'>
-            <div className="h-14 space-grotesk max-w-[1600px] w-full border border-transparent border-b-slate-200 flex items-center justify-between px-7 md:px-14 font-medium">
-                <div className="flex items-center ">
-                    <div className="flex items-center mr-12 cursor-pointer" onClick={() => window.location.href='/'} >
-                      <Image src={logo} alt="NuTrustX Logo PNG" className="brand-light w-8"/>
-                      <p className='space-grotesk ml-2 text-[10px] mt-auto font-medium'>BETA</p>
-                    </div>
-                </div>
-                <div className="items-center flex">
-                    <Link href='/' className='title text-base'>Noticias</Link>
-                </div>
-            </div>
-            <div className="w-full py-2 px-7 md:px-14 max-w-[1600px] flex justify-between">
-                <div className="flex items-center">
-                  <p className='m-0'>Bitcoin</p>
-                  <div className="w-6 overflow-hidden inline-block">
-                    <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
-                  </div>
-                  <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.btc}$</p>
-                </div>
-                <div className="md:flex hidden items-center">
-                  <p className='m-0'>Ethereum</p>
-                  <div className="w-6 overflow-hidden inline-block">
-                    <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
-                  </div>
-                  <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.eth}$</p>
-                </div>
-                <div className="md:flex hidden items-center">
-                  <p className='m-0'>Litecoin</p>
-                  <div className="w-6 overflow-hidden inline-block">
-                    <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
-                  </div>
-                  <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.ltc}$</p>
-                </div>
-                <div className="md:flex hidden items-center">
-                  <p className='m-0'>Polygon</p>
-                  <div className="w-6 overflow-hidden inline-block">
-                    <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
-                  </div>
-                  <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.matic}$</p>
-                </div>
-                <div className="md:flex hidden items-center">
-                  <p className='m-0'>Cardano</p>
-                  <div className="w-6 overflow-hidden inline-block">
-                    <div className="ml-2 h-2 w-2 bg-green-light rotate-45 transform origin-bottom-left"></div>
-                  </div>
-                  <p className='m-0 ml-0 text-xs font-medium py-0.5 px-3 bg-green-light/30 sans'>{prices.ada}$</p>
-                </div>
-            </div>
-        </nav>
 
-        <div className="w-full text-start font-normal text-black space-grotesk pt-20 md:pt-40 items-start flex pb-[18rem] mb-24 relative overflow-hidden max-w-[1400px] md:px-14">
+        <div className="w-full text-start font-normal text-black space-grotesk items-start flex pb-[18rem] mb-24 relative overflow-hidden max-w-[1600px] md:px-14">
 
-          <div className="w-1/4 md:flex hidden pr-12 flex-col border">     
-            <Adsense client_id="3940256099942544"/>
+          <div className="w-1/4 md:flex hidden pr-12 flex-col pt-40">     
+            {/*<Adsense client_id="3940256099942544"/>
             <AdUnit className="adsbygoogle block"
                 data-ad-client="3940256099942544"
                 data-ad-slot="1033173712"
@@ -121,9 +57,31 @@ export default function Home({ posts }) {
                 data-ad-slot="1033173712"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
-            />
+            />*/}
+            <p className='m-0 text-3xl'>Most Read</p>
+            {
+              leftPostsMap.map(post => {
+
+                  if(post && post.title) {
+                      return (
+                          <div key={post.slug} className="w-full mt-8 cursor-pointer" onClick={() => window.location.href = "/" + post.slug ? post.slug : ''}>
+                              <div className="w-full h-72 relative">
+                                  <Image width="1000" height="1000" src={post.image} alt="" className='w-full h-full object-cover' />
+                                  <Link className='absolute top-4 right-4 bg-green-500 px-4 py-1 text-black text-sm font-semibold' href={"/" + post.slug ? post.slug : ''}>Read</Link>
+                                  <div className="flex absolute bottom-0 w-full flex-col h-24 p-4 backdrop-blur-sm bg-white/20">
+                                  <h3 className="text-white text-md font-medium text-ellipsis overflow-hidden whitespace-nowrap">{post.title ? post.title : ''}</h3>
+                                  <p className="text-white m-0 leading-4 text-xs">{post.description ? post.description : ''}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      )
+                  } 
+              })
+            }
           </div>
-          <div className="xl:w-1/2 md:mt-0 mt-12 w-full flex flex-col items-start text-start px-7">
+
+          <div className="xl:w-1/2 md:border border-slate-200 w-full flex flex-col items-start text-start mx-7 pt-40">
+            
             <div className="w-full cursor-pointer" onClick={() => window.location.href='/cuales_son_los_principales_usos_de_una_cuenta_bancaria'}>
               <h1 className='m-0 md:text-4xl text-3xl'>Los principales usos de una cuenta bancaria</h1>
               <p className='mb-4 mt-0 title'>Bitcoin, Inversiones, Finanzas</p>
@@ -144,7 +102,8 @@ export default function Home({ posts }) {
             })}
           
           </div>
-          <div className="w-1/4 -mt-8 md:block hidden">
+
+          <div className="w-1/4 -mt-8 md:block hidden pt-40">
           {
             sidePostsMap.map(post => {
 
@@ -163,9 +122,9 @@ export default function Home({ posts }) {
                     )
                 } 
             })
-
-        }
+          }
           </div>
+
         </div>
 
       </main>
@@ -180,12 +139,3 @@ export async function getStaticProps() {
     props: { posts }
   }
 }
-
-
-export const getCryptos = () => {
-  return axios.get('/api/GetCryptoData')
-    .then(response => response.data)
-    .catch(error => {
-      console.error(error.message);
-    });
-};

@@ -6,6 +6,12 @@
 
 :root{
     font-family: 'DM Serif Display', DM Sans, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
 }
 .bg-default{
     background-color: #F2F5F8;
