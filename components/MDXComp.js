@@ -1,8 +1,6 @@
-import { ImageAdd, AmazonBook, BrokerAdd } from "./MDXRes";
+import { ImageAdd } from "./MDXRes";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    ImageAdd,
-    AmazonBook,
-    BrokerAdd
+    ImageAdd
 }
