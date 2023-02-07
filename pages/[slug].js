@@ -16,7 +16,6 @@ export default function Post({source, frontmatter, relatedPosts, posts}) {
     const [postsMap, setPostsMap] = useState([]);
 
     useEffect(() => {
-        console.log(posts)
         setPostsMap(posts.sort(() => Math.random() - 0.5).slice(0, 12));
     }, [posts]);
 
